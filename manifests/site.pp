@@ -50,7 +50,7 @@ node default {
   file { '/etc/motd':
   ensure =>file,
   owner -> 'root',
-  content => "Happy Birthday",
+  content => "Happy Birthday", }
   }
   
   
