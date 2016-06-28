@@ -41,6 +41,7 @@ ini_setting { 'random ordering':
 
 
 node default {
+include users 
   # This is where you can declare classes for all nodes.
   # Example:
   #   class { 'my_class': }
@@ -67,8 +68,7 @@ node default {
   #unless => '/bin/grep -F "Welcome to" /etc/motd'
   }
   
-  include users 
-  
+
   }
   
   
