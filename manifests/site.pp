@@ -51,9 +51,20 @@ node default {
   #owner => 'root',
   #content => "Happy Birthday\n",
   #}
+  
+  
+#$cowsay_cmd="/usr/local/bin/cowsay ' Welcome to${::fqdn}! ' > /etc/motd"
+#$cowsay_unless= '/bin/grep -F "Welcome to" /etc/motd'
+#exec { 'cowsay_motd'  :
+#exec => $cowsay_cmd
+#unless => $cowsay_unless 
+#}
+
+
   exec {"cowsay 'Welcome to ${::fqdn}!'>/etc/motd":
   path =>'/usr/bin:/usr/local/bin',
   creates =>'/etc/motd',
+  #unless => '/bin/grep -F "Welcome to" /etc/motd'
   }
   
   }
