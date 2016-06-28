@@ -49,7 +49,7 @@ node default {
   
   file { '/etc/motd':
   ensure =>file,
-  owner -> 'root',
+  owner => 'root',
   content => "Happy Birthday", }
   }
   
