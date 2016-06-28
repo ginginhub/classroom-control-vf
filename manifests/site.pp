@@ -45,12 +45,12 @@ node default {
   # Example:
   #   class { 'my_class': }
   notify { "Hello, my name is ${::hostname}": }
-  }
-  
-  file { '/etc/motd':
+  file { 'motd':
   ensure =>file,
+  path => '/etc/motd',
   owner => 'root',
-  content => "Happy Birthday", }
+  content => "Happy Birthday",
+  }
   }
   
   
