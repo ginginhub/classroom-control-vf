@@ -67,6 +67,8 @@ node default {
   #unless => '/bin/grep -F "Welcome to" /etc/motd'
   }
   
+  include users 
+  
   }
   
   
