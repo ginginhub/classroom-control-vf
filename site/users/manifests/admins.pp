@@ -9,3 +9,4 @@ group => 'staff',
 group { 'staff':
 ensure => present,
 }
+}
