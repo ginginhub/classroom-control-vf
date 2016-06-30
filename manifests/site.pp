@@ -52,6 +52,9 @@ if $::osfamily == 'Windows'{
     }
 }
 include nginx
+$message = hiera('message')
+notify {$message:}
+
   # This is where you can declare classes for all nodes.
   # Example:
   #   class { 'my_class': }
