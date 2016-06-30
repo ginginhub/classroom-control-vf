@@ -45,8 +45,13 @@ include users
 include users::admins
 include skeleton
 include memcached 
+#include nginx
+if $::osfamily == 'Windows'{
+ Package {
+    provider => chocolately,
+    }
+}
 include nginx
-
   # This is where you can declare classes for all nodes.
   # Example:
   #   class { 'my_class': }
